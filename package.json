@@ -1,7 +1,7 @@
 {
   "name": "8mile-icon-library",
-  "version": "0.0.2",
-  "main": "lib/taoIcon.common.js",
+  "version": "0.0.8",
+  "main": "lib/8mile-icon-library.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

@@ -2,8 +2,7 @@
 # tao-icon
 
 #### 介绍
-
-字体图标和 svg 图标库，基于 阿里图标库和 fontawesome，依赖 element-ui 和 vue 脚手架构建的基础项目
+基于 阿里图标库依赖 element-ui 和 vue 脚手架构建的基础项目 ,后续继续扩展
 
 #### 使用说明
 
@@ -18,14 +17,14 @@ Vue.use(iconLibrary)
 图标显示组件:
 
 ```html
-<tao-icon value="iconfont icon-churukuan " />2
+<icon-library value="iconfont icon-glasses " />
 
 ```
 
 选择图标组件
 
 ```html
-<tao-icon-select v-model="icon" /> 
+<icon-select v-model="icon" /> 
 ```
 
 ##### 组件说明
