@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import "@/assets/iconfront-icon/iconfont.css";
-import "@/assets/iconfront-icon/iconfont.js";
+import "@/assets/iconfont-icon/iconfont.css";
+import "@/assets/iconfont-icon/iconfont.js";
 export default {
   name: "icon-library",
   props: {
