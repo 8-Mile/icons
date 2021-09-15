@@ -1,0 +1,45 @@
+{
+  "name": "icon-library",
+  "version": "0.1.6",
+  "description": "个人使用图标库,不建议用于生产",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --target lib --name taoIcon --dest lib src/components/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "main": "lib/taoIcon.common.js",
+  "unpkg": "lib/taoIcon.umd.js",
+  "style": "lib/taoIcon.css",
+  "author": "upholdjx",
+  "keywords": [
+    "icon",
+    "vue",
+    "components"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.13.2",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "svg-sprite-loader": "^4.2.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
