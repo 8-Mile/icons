@@ -1,11 +1,4 @@
-<!--
- * @Author: your name
- * @Date: 2020-09-21 13:59:02
- * @LastEditTime: 2020-10-09 16:07:32
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \AK-FRONT-5.0e:\demo\t-icon\src\App.vue
--->
+
 <template>
   <div id="app">
     <!-- <div class="demo">

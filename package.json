@@ -1,16 +1,13 @@
 {
-  "name": "icon-library",
-  "version": "0.1.6",
-  "description": "个人使用图标库,不建议用于生产",
+  "name": "8mile-icon-library",
+  "version": "0.0.2",
+  "main": "lib/taoIcon.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name taoIcon --dest lib src/components/index.js",
+    "build:lib": "vue-cli-service build --target lib --name 8mile-icon-library --dest lib src/components/index.js",
     "lint": "vue-cli-service lint"
   },
-  "main": "lib/taoIcon.common.js",
-  "unpkg": "lib/taoIcon.umd.js",
-  "style": "lib/taoIcon.css",
   "author": "upholdjx",
   "keywords": [
     "icon",
