@@ -56,7 +56,7 @@ export default {
     return {
       dialogVisible: false,
       activeName: "通用",
-      iconData,
+      iconData
     };
   },
   methods: {
