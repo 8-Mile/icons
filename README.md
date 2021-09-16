@@ -10,7 +10,7 @@
 npm install 8mile-icon-library --save
 
 import iconLibrary from '8mile-icon-library'
-import "icon-library/lib/8mile-icon-library.css";
+import "8mile-icon-library/lib/8mile-icon-library.css";
 Vue.use(iconLibrary)
 ```
 

@@ -35,7 +35,6 @@ export default {
         }
       },
       set(val) {
-        console.log(val, "ddd");
       },
     },
   },

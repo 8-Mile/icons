@@ -1,6 +1,6 @@
 {
   "name": "8mile-icon-library",
-  "version": "0.0.8",
+  "version": "0.1.12",
   "main": "lib/8mile-icon-library.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",

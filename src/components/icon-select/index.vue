@@ -2,37 +2,73 @@
 <template>
   <div>
     <el-input
-      placeholder="请输入内容"
+      placeholder="请选择图标"
       v-model="value"
       class="input-with-select"
     >
       <el-button type="primary" slot="append" @click="dialogVisible = true">
-        <icon-library v-model="value" />
+        <slot>
+          <icon-library v-model="iconVal" />
+        </slot>
       </el-button>
     </el-input>
-    <el-dialog title="选择图标" :visible.sync="dialogVisible" width="60%">
-      <el-tabs v-model="activeName" tab-position="left">
-        <el-tab-pane
-          v-for="(item, index) in iconData"
-          :key="index"
-          :label="item.title"
-          :name="item.title"
-        >
-          <section class="main">
-            <article
-              v-for="(iconChi, index2) in item.icon"
-              :key="index2"
-              @click="handleClick(`${item.type} ${iconChi}`)"
-              class="item"
-            >
-              <template >
-                <iconlibrary class="icon" :value="`${item.type} ${iconChi} 40`"/>
-              </template>
-            </article>
-          </section>
-        </el-tab-pane>
-      </el-tabs>
-    </el-dialog>
+    <div class="v-modal" v-show="dialogVisible"></div>
+    <div
+      class="el-dialog__wrappers ddddddd"
+      style="z-index: 9999"
+      v-show="dialogVisible"
+    >
+      <div class="el-dialog">
+        <div class="el-dialog__header">
+          <span class="el-dialog__title">选择图标1</span
+          ><button
+            type="button"
+            aria-label="Close"
+            class="el-dialog__headerbtn"
+            @click="dialogVisible = false"
+          >
+            <i class="el-dialog__close el-icon el-icon-close"></i>
+          </button>
+        </div>
+        <el-tabs v-model="activeName" tab-position="left">
+          <el-tab-pane
+            v-for="(item, index) in iconData"
+            :key="index"
+            :label="item.title"
+            :name="item.title"
+          >
+            <section class="main">
+              <article
+                v-for="(iconChi, index2) in item.icon"
+                :key="index2"
+                @click="handleClick(`${item.type} ${iconChi}`)"
+                class="item"
+              >
+                <template>
+                  <icon-library
+                    class="icon"
+                    :value="`${item.type} ${iconChi} 40`"
+                  />
+                </template>
+              </article>
+            </section>
+          </el-tab-pane>
+        </el-tabs>
+      </div>
+    </div>
+
+    <!-- <el-dialog
+      title="选择图标"
+      :visible.sync="dialogVisible"
+      width="60%"
+      :close-on-click-modal="false"
+      :close-on-press-escape="false"
+      :modal-append-to-body="false"
+      :append-to-body="true"
+      style="z-index: 9999"
+    >
+    
+    </el-dialog> -->
   </div>
 </template>
 
@@ -42,10 +78,10 @@ import iconList from "./iconList";
 export default {
   name: "icon-select",
   components: {
-    iconlibrary
+    iconlibrary,
   },
   props: {
-    value: {}
+    value: "",
   },
   data() {
     const iconData = iconList.map((item) => {
@@ -56,12 +92,14 @@ export default {
     return {
       dialogVisible: false,
       activeName: "通用",
-      iconData
+      iconData,
+      iconVal: "iconfont icon-search",
     };
   },
   methods: {
     handleClick(val) {
       this.$emit("input", val);
+      this.iconVal = val;
       this.dialogVisible = false;
     },
   },
@@ -87,5 +125,12 @@ export default {
   background-color: #409eff;
   color: #fff;
   transition: width 2s, background-color 1s;
+}
+.el-dialog__header {
+  border-bottom: #ccc solid 1px;
+}
+.el-dialog{
+  margin-top: 5vh;
+  width: 60%
 }
 </style>
