@@ -31,7 +31,7 @@
           </button>
         </div>
         <el-tabs v-model="activeName" tab-position="left">
-          <el-tab-pane
+          <!-- <el-tab-pane
             v-for="(item, index) in iconData"
             :key="index"
             :label="item.title"
@@ -52,7 +52,7 @@
                 </template>
               </article>
             </section>
-          </el-tab-pane>
+          </el-tab-pane> -->
         </el-tabs>
       </div>
     </div>
