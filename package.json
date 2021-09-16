@@ -1,12 +1,18 @@
 {
-  "name": "8mile-icon-library",
-  "version": "0.1.14",
-  "main": "lib/8mile-icon-library.common.js",
+  "name": "icon-library",
+  "version": "0.0.5",
+  "main": "lib/icon-library.common.js",
+  "unpkg": "lib/icon-library.umd.js",
+  "style": "lib/icon-library.css",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --name 8mile-icon-library --dest lib src/components/index.js",
+    "build:lib": "vue-cli-service build --target lib --name icon-library --dest lib src/components/index.js",
     "lint": "vue-cli-service lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/8-Mile/TsVue3.git"
   },
   "author": "upholdjx",
   "keywords": [
@@ -25,7 +31,6 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "element-ui": "^2.13.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {

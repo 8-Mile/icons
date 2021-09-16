@@ -1,11 +1,6 @@
 
 <template>
   <div id="app">
-    <!-- <div class="demo">
-      <div>
-        <icon-library value="iconfont icon-churukuan " />
-      </div>
-    </div> -->
     <icon-select v-model="icon" />
   </div>
 </template>

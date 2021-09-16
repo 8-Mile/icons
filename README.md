@@ -7,10 +7,10 @@
 #### 使用说明
 
 ```html
-npm install 8mile-icon-library --save
+npm install icon-library --save
 
-import iconLibrary from '8mile-icon-library'
-import "8mile-icon-library/lib/8mile-icon-library.css";
+import iconLibrary from 'icon-library'
+import "icon-library/lib/icon-library.css";
 Vue.use(iconLibrary)
 ```
 

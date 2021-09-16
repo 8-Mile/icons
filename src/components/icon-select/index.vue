@@ -1,26 +1,22 @@
-
 <template>
   <div>
-    <el-input
-      placeholder="请选择图标"
-      v-model="value"
-      class="input-with-select"
-    >
-      <el-button type="primary" slot="append" @click="dialogVisible = true">
-        <slot>
-          <icon-library v-model="iconVal" />
-        </slot>
-      </el-button>
-    </el-input>
+    3333333333333
+    <input type="text" />
+    <button type="primary" slot="append" @click="dialogVisible = true">
+      <slot>
+        <icon-library v-model="iconVal" />
+      </slot>
+    </button>
+
     <div class="v-modal" v-show="dialogVisible"></div>
     <div
-      class="el-dialog__wrappers ddddddd"
+      class="el-dialog__wrapper"
       style="z-index: 9999"
       v-show="dialogVisible"
     >
       <div class="el-dialog">
         <div class="el-dialog__header">
-          <span class="el-dialog__title">选择图标1</span
+          <span class="el-dialog__title">选择图标</span
           ><button
             type="button"
             aria-label="Close"
@@ -31,7 +27,7 @@
           </button>
         </div>
         <el-tabs v-model="activeName" tab-position="left">
-          <!-- <el-tab-pane
+          <el-tab-pane
             v-for="(item, index) in iconData"
             :key="index"
             :label="item.title"
@@ -52,7 +48,7 @@
                 </template>
               </article>
             </section>
-          </el-tab-pane> -->
+          </el-tab-pane>
         </el-tabs>
       </div>
     </div>
@@ -65,9 +61,32 @@
       :close-on-press-escape="false"
       :modal-append-to-body="false"
       :append-to-body="true"
-      style="z-index: 9999"
+      :modal="false"
     >
-    
+      <el-tabs v-model="activeName" tab-position="left">
+        <el-tab-pane
+          v-for="(item, index) in iconData"
+          :key="index"
+          :label="item.title"
+          :name="item.title"
+        >
+          <section class="main">
+            <article
+              v-for="(iconChi, index2) in item.icon"
+              :key="index2"
+              @click="handleClick(`${item.type} ${iconChi}`)"
+              class="item"
+            >
+              <template>
+                <icon-library
+                  class="icon"
+                  :value="`${item.type} ${iconChi} 40`"
+                />
+              </template>
+            </article>
+          </section>
+        </el-tab-pane>
+      </el-tabs>
     </el-dialog> -->
   </div>
 </template>
@@ -124,13 +143,14 @@ export default {
   cursor: pointer;
   background-color: #409eff;
   color: #fff;
+  border-radius: 5px;
   transition: width 2s, background-color 1s;
 }
 .el-dialog__header {
   border-bottom: #ccc solid 1px;
 }
-.el-dialog{
+.el-dialog {
   margin-top: 5vh;
-  width: 60%
+  width: 60%;
 }
 </style>

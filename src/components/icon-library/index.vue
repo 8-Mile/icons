@@ -3,14 +3,13 @@
     <i
       :class="icon.class"
       :style="{ fontSize: `${icon.size}px` }"
-      aria-hidden="true"
     ></i>
   </div>
 </template>
 
 <script>
 import "@/assets/iconfont-icon/iconfont.css";
-import "@/assets/iconfont-icon/iconfont.js";
+// import "@/assets/iconfont-icon/iconfont.js";
 export default {
   name: "icon-library",
   props: {
