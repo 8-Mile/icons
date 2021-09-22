@@ -1,8 +1,12 @@
 
 import Vue from "vue";
 import App from "./App.vue";
-import icon from "@/components";
-Vue.use(icon);
+import taoIcon from "@/components";
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+
+Vue.use(taoIcon);
 Vue.config.productionTip = false;
 
 new Vue({

@@ -3,6 +3,7 @@
     <i
       :class="icon.class"
       :style="{ fontSize: `${icon.size}px` }"
+      aria-hidden="true"
     ></i>
   </div>
 </template>
@@ -31,6 +32,12 @@ export default {
             size: temp[2],
             class: type[temp[0]],
           };
+        }else{
+          return {
+            type: 'iconfont',
+            size: '14',
+            class: 'iconfont icon-search'
+          }
         }
       },
       set(val) {

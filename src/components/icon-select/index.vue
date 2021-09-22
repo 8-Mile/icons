@@ -1,13 +1,16 @@
 <template>
   <div>
-    3333333333333
-    <input type="text" />
-    <button type="primary" slot="append" @click="dialogVisible = true">
-      <slot>
-        <icon-library v-model="iconVal" />
-      </slot>
-    </button>
-
+    <el-input
+      placeholder="请选择图标"
+      v-model="value"
+      class="input-with-select"
+    >
+      <el-button type="primary" slot="append" @click="dialogVisible = true">
+        <slot>
+          <icon-library v-model="value" />
+        </slot>
+      </el-button>
+    </el-input>
     <div class="v-modal" v-show="dialogVisible"></div>
     <div
       class="el-dialog__wrapper"
